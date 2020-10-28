@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/city_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="48sp"
+        android:text="TextView"
+        android:paddingTop="15dp"
+        android:layout_below="@id/main_toolbar" />
+
+    <ImageView
+        android:id="@+id/forecast_img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        tools:srcCompat="@tools:sample/avatars"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/city_name"
+        android:paddingTop="20dp" />
+
+    <TextView
+        android:id="@+id/Temp"
+        android:layout_below="@id/forecast_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="24sp"
+        android:paddingTop="15dp"
+        android:text="@string/temp"></TextView>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Temp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:paddingTop="15dp"
+            android:text="@string/status"
+            android:id="@+id/status" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:paddingTop="15dp"
+            android:text="not_defined"
+            android:id="@+id/status_value" />
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/main_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</RelativeLayout>
